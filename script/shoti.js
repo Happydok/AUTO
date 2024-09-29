@@ -12,7 +12,7 @@ module.exports.config = {
   usage: "[shoti]",
   cooldowns: 5,
   dependencies: [],
-  usePrefix: false,
+  usePrefix: true,
 };
 
 module.exports.handleEvent = async function ({ api, event }) {
@@ -22,8 +22,6 @@ module.exports.handleEvent = async function ({ api, event }) {
 
     try {
      api.setMessageReaction("💨", event.messageID, (err) => {}, true);
-     api.sendMessage("😤👉👌 | Sending Shoti Video Please Wait....", (err) => {}, true);
-        
 
 
     const response = await axios.get("https://shoti-srv2.onlitegix.com/api/v1/request-f");
@@ -58,7 +56,7 @@ const title = response.data.data.title || "undefined";
         api.sendMessage(`Shoti Error: ${err}`, event.threadID, event.messageID);
       });
     } catch (error) {
-     api.setMessageReaction("🔴", event.messageID, (err) => {}, true);
+     api.setMessageReaction("🖕", event.messageID, (err) => {}, true);
     }
   };
 module.exports.run = async function ({ api, event }) {
