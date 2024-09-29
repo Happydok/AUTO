@@ -12,7 +12,7 @@ module.exports.config = {
   usage: "[shoti]",
   cooldowns: 5,
   dependencies: [],
-  usePrefix: true,
+  usePrefix: false,
 };
 
 module.exports.handleEvent = async function ({ api, event }) {
@@ -21,8 +21,8 @@ module.exports.handleEvent = async function ({ api, event }) {
 
 
     try {
-     api.setMessageReaction("⏳", event.messageID, (err) => {}, true);
-     api.sendMessage("⏳ | Sending Shoti Video Please Wait....", event.threadID, event.messageID);
+     api.setMessageReaction("💨", event.messageID, (err) => {}, true);
+     api.sendMessage("😤👉👌 | Sending Shoti Video Please Wait....", (err) => {}, true);
         
 
 
@@ -41,7 +41,7 @@ const title = response.data.data.title || "undefined";
 
       file.on("finish", async () => {
 
-      api.setMessageReaction("❤️", event.messageID, (err) => {}, true);
+      api.setMessageReaction("💦", event.messageID, (err) => {}, true);
 
 
         await api.sendMessage(
