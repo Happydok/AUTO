@@ -4,7 +4,7 @@ const axios = require('axios');
 const yts = require('yt-search');
 
 module.exports.config = {
-  name: "vid",
+  name: "video",
   hasPermission: 0,
   version: "1.0.0",
   description: "Get YouTube video download link",
