@@ -1,14 +1,14 @@
 const axios = require('axios');
 
 module.exports.config = {
-    name: 'gemini',
+    name: 'gm',
     version: '1.0.0',
     role: 0,
     hasPrefix: true,
-    aliases: ['gemini'],
-    description: 'Interact with the Gemin',
-    usage: 'gemini [custom prompt] (attach image or not)',
-    credits: 'churchill',
+    aliases: ['gm', 'ai2'],
+    description: 'gm [custom prompt] (attach image or not)',
+    usage: 'gm [custom prompt] (attach image or not)',
+    credits: 'mark',
     cooldown: 3,
 };
 
